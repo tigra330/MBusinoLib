@@ -583,7 +583,7 @@ uint8_t MBusinoLib::decode(uint8_t *buffer, uint8_t size, JsonArray& root) {
     }
 
     // Init object
-    JsonObject data = root.add<JsonObject>();
+    JsonObject data = root.createNestedObject();
       data["vif"] = String("0x" + String(vif,HEX));
       data["code"] = vif_defs[def].code;
     //data["vifarray1"] = String("0x" + String(vifarray[1],HEX));
